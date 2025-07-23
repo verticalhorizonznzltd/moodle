@@ -1,1 +1,247 @@
-https://github.com/verticalhorizonznzltd/moodle
+/* Upgrade -> 4.5 */
+body {
+    background-repeat: no-repeat;
+}
+
+#page-site-index #page {
+    background-image: none;
+}
+
+#page {
+    background-image: url('/pluginfile.php/1/theme_vhnz/backgroundimage/1750032504/new_background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.card-grid .card.dashboard-card .dashboard-card-img {
+  height: 7rem;
+  background-position: center;
+  background-size: cover;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.card.dashboard-card {
+  margin-right: .25rem;
+  margin-left: .25rem;
+}
+
+/* hide the trailing header */
+#region-main h2:first-of-type {
+    display: none;
+}
+
+
+/* End Upgrade -> 4.5 */
+
+li[data-key="mycourses"] {
+   display: none;
+}
+
+.navbar.fixed-top.navbar-light.bg-white.navbar-expand, .usermenu {
+    background-color: #000000 !important;
+    .nav-link, .role, .dropdown-toggle {
+        color: #ffffff;
+        &.active {
+            color: var(--primary);
+        }
+        &:hover,
+            &:focus {
+            background-color: #000;
+            color: var(--primary);
+        }
+    }
+}
+form.editmode-switch-form {
+    color: #ffffff;
+}
+.navbar.fixed-top .navbar-brand .logo {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+#usernavigation.navbar-nav {
+    color: #ffffff;
+    .popover-region-container {
+        color: #000000;
+    }
+}
+
+#user-action-menu.dropdown-menu.show {
+    .dropdown-item {
+        &:hover {
+            background-color: var(--primary);
+        }
+    }
+}
+
+/* Test font change to increase font size for most learner facing text bodies - James W */
+.course-description-item div, .course-description-item span, .course-description-item strong, div.activity-description, p > b, p > span, ul > li > span {
+     /*font-size: 1.1rem !important;*/
+}
+
+
+
+/* CSS to tidy up enrolment method page */
+#fitem_id_nokey > .col-md-3, #fitem_id_info > .col-md-3 {
+ display:none !important;
+}
+
+/* Hide toggle thing */
+#page-enrol-index .icons-collapse-expand {
+display: none;
+}
+
+/* Hide 'Enrolment options' header 2 */
+#region-main > div > h2  {
+  display: none;
+}
+
+.box.py-3.generalbox > .enrol_fee_payment_region, .enrol_fee_payment_region > .mdl-align {
+ text-align: left !important;
+}
+
+.enrol_fee_payment_region > p:first-child,  #id_selfheader h3, .enrol_fee_payment_region > .mdl-align p:first-child {
+  font-size: 1.340625rem !important;
+font-weight: 700;
+}
+
+/* Make offset disappear */
+#fitem_id_submitbutton .col-form-label {
+ display: none !important;
+}
+
+/* Hide course title as URL */
+.coursebox > .info {
+ display: none !important;
+}
+
+/* Make unit description on enrolment page italic */
+#page-enrol-index  .summary > div { 
+ font-style: italic !important;
+}
+
+#page-enrol-index  div.coursecat{ 
+ font-weight: 500 !important;
+}
+
+/* Make enrolment page course image bigger */
+#page-enrol-index .courseimage > img {
+ max-width: 200px;
+ max-height: 200px;
+}
+
+#page-enrol-index .continuebutton {
+ text-align: left;
+display: none !important;
+}
+
+/* Fix weird issue with Course content/SCORM package window having content show 100% of width */
+@media (min-width: 768px) {
+#page-mod-scorm-view #page.drawers .main-inner {
+    padding: 1.5rem .5rem;
+    max-width: 830px !important;
+}
+}
+
+#page-mod-quiz-view .quizattempt > p {
+text-align: center !important;
+}
+
+/* Remove activity type text e.g. see https://moodle.org/mod/forum/discuss.php?d=434392 */
+.activitytitle .text-uppercase {
+  display:none;
+}
+
+/* Add note to show 90 day enrolment length and warning */
+#enrolment-expiry-warning {
+border: .4px solid #f7f3f3;
+    padding-left: 20px;
+    border-radius: 5px 25px;
+font-size: large;
+    height: 60px;
+    width: 41%;
+    position: fixed;
+    bottom: 1%;
+    display: block;
+    background-color: #1982bb;
+color: white;
+font-weight: 100;
+}
+
+/* Hide the optional and address section in profile edit page */
+/*#id_moodle_additional_names,*/ #fitem_id_firstnamephonetic, #fitem_id_lastnamephonetic,  #id_moodle_optional, #id_moodle_picture, #fitem_id_maildisplay, #fitem_id_moodlenetprofile, #fitem_id_timezone {
+display:none !important;
+}
+
+/* Fix nav hamburger being grey by default on black background */
+.navbar-light > .navbar-toggler > .navbar-toggler-icon {
+    /*background-color: #7e7efc;*/
+
+    /*background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 255 30'%3e%3cpath stroke='rgba%0, 0, 0, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;*/
+}
+
+.navbar-light .navbar-toggler-icon {
+background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 200, 190, 1' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+/* Hide the submission comments notice on the grading table view */
+div.gradingtable #hide-in-grading-table {
+  display: none !important;
+}
+
+/* Make login, new account and guest button full width on login page */
+.login-form-submit > #loginbtn,  #page-login-index .btn.btn-secondary {
+width: 100% !important;
+}
+
+/* Hide cookies notice and trailing dividers */
+#page-login-index  button.btn-secondary:nth-child(1) {
+display:none;
+}
+
+/* Remove last divider */
+.login-container div:nth-child(12) {
+    display: none;
+}
+
+/* Login page staff login button styling */
+#page-login-index .login-identityprovider-btn {
+background-color: #ff6f42;
+font-weight: 600;
+color: white;
+border: 0px;
+}
+
+#page-login-index .login-identityprovider-btn:hover {
+background-color: #ca4a22;
+}
+
+/* Login logo size */
+#page-login-index #logoimage.img-fluid {
+max-width: 60% !important;
+}
+
+/* Nav bottom border line (Where navigation and logo is) */
+.navbar.fixed-top {
+border-bottom: #19d3ff 0px solid
+}
+
+/* HTML table styling for the level 4 workplace health and safety course */
+#unit-standards-table-lv4, #unit-standards-table-lv4 td, #unit-standards-table-lv4 th {
+border: solid 1px black;
+}
+
+#unit-standards-table-lv4 tr td:nth-child(3), #unit-standards-table-lv4 tr td:nth-child(4) {
+text-align: center;
+}
+
+/* Report title text colour */
+nav .h3.m-0.p-0 {
+ color: white !important;
+}
+
+/* Hide red cross icon in assignfeedback_editpdf */
+.assignfeedback_editpdf_dropdown button[data-stamp$="cross.png"] {
+    display: none;
+}
+/* End hide red cross */
